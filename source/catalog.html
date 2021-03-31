@@ -33,7 +33,7 @@
     </header>
     <main class="page-catalog">
       <section class="gallery">
-        <h2 class="main-title">Фото и видео</h2>
+        <h2 class="main-title gallery__title">Фото и видео</h2>
         <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         <ul class="gallery__list">
           <li class="gallery__item photo">
@@ -78,12 +78,19 @@
           </li>
         </ul>
       </section>
-      <section class="find-hotels">
-        <h2 class="main-title find-hotels__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-        <p class="find-hotels__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button class="button find-hotels__button" type="button">НАЙТИ гостиницу</button>
-        <div class="map find-hotels__map">
-          <img src="img/map/map-mobile.jpg" width="320" height="350" alt="Карта">
+      <section class="presentation">
+        <h2 class="main-title presentation__title">Все еще сомневаетесь?</h2>
+        <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <video class="presentation__video" controls width="320" height="201" poster="img/background-imgs/video-mobile.jpg" preload="none">
+          <source src="#" type="video/mp4">
+        </video>
+        <div class="controls">
+          <button class="controls__button-repeat" type="button">Воспроизвести сначала</button>
+          <div class="range controls__range">
+            <label><input type="range" min="0" max="100" step="1" value="20">Полоса прокрутки</label>
+          </div>
+          <button class="controls__button-sub" type="button">Субтитры</button>
+          <button class="controls__button-fullscreen" type="button">Во весь экран</button>
         </div>
       </section>
     </main>
