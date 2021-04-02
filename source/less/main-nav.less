@@ -21,19 +21,22 @@
   text-decoration: none;
   color: @alternative-text-color;
   background-color: @background-color;
-  border-bottom: 1px solid rgba(@border-color, .2);
+  border-bottom: 1px solid rgba(@border-color, 0.2);
+
   &:not(.main-nav__item--active) {
     cursor: pointer;
   }
+
   &:hover {
     &:not(.main-nav__item--active) {
       background-color: @background-color-darken;
     }
   }
+
   &:active {
     &:not(.main-nav__item--active) {
       background-color: @background-color-dark;
-        opacity: 0.3;
+      opacity: 0.3;
     }
   }
 }

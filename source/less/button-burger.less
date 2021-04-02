@@ -9,9 +9,11 @@
   height: 23px;
   cursor: pointer;
   position: absolute;
+
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -19,8 +21,8 @@
 
 .button-burger__line {
   &,
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     position: absolute;
     width: 23px;
     height: 4px;
@@ -28,15 +30,18 @@
     margin-top: -2px;
     background-color: @background-color;
   }
-  &:before,
-  &:after {
+
+  &::before,
+  &::after {
     content: "";
     transition-duration: 0.7s;
   }
-  &:before {
+
+  &::before {
     transform: translateY(-9px);
   }
-  &:after {
+
+  &::after {
     transform: translateY(9px);
   }
 }
@@ -47,17 +52,21 @@
   ~ .button-burger__lines > .button-burger__line::after {
     background-color: @alternative-text-color;
   }
+
   ~ .button-burger__lines > .button-burger__line {
     height: 0;
   }
+
   ~ .button-burger__lines > .button-burger__line::before,
   ~ .button-burger__lines > .button-burger__line::after {
     width: 26px;
     height: 4px;
   }
+
   ~ .button-burger__lines > .button-burger__line::before {
     transform: rotate(45deg);
   }
+
   ~ .button-burger__lines > .button-burger__line::after {
     transform: rotate(-45deg);
   }
