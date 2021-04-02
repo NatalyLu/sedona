@@ -3,28 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
+        <input class="button-burger main-nav__burger-input" id="burger" type="checkbox" value="Открыть меню">
+        <label  class="button-burger__lines main-nav__burger-lines" for="burger">
+          <span class="button-burger__line"></span>
+        </label>
+        <ul class="main-nav__list">
+          <li>
+            <a  class="main-nav__item main-nav__item--active">Главная</a>
+          </li>
+          <li>
+            <a class="main-nav__item" href="catalog.html">Фото и видео</a>
+          </li>
+          <li>
+            <a class="main-nav__item" href="form.html">Форма Отзыва</a>
+          </li>
+          <li>
+            <a class="main-nav__item" href="https://htmlacademy.ru/">HTML ACADEMY</a>
+          </li>
+        </ul>
         <a class="main-nav__logo">
           <img src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Sedona">
         </a>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="catalog.html">Фото и видео</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Форма Отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/">HTML ACADEMY</a>
-          </li>
-        </ul>
       </nav>
       <div class="page-header__wrapper">
         <h1 class="visually-hidden page-header__title">Добро пожаловаь в Sedona</h1>

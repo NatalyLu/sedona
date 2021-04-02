@@ -1,1 +1,29 @@
-// Начните писать стили здесь
+@import url("page-header.less");
+@import url("general-rules.less");
+@import url("main-nav.less");
+@import url("button-burger.less");
+
+// Colors
+@alternative-text-color: #fff;
+@background-color: #81B3D2;
+@background-color-darken: #669EC0;
+@background-color-dark: #5496BD;
+@border-color: #010101;
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/ptsans.woff") format("woff"),
+        url("../fonts/ptsans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("../fonts/ptsansbold.woff") format("woff"),
+        url("../fonts/ptsansbold.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-size: 14px;
+  font-family: "PTSans", sans-serif;
+}
