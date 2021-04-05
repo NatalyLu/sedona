@@ -19,7 +19,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: @alternative-text-color;
+  color: @text-alt-color;
   background-color: @background-color;
   border-bottom: 1px solid rgba(@border-color, 0.2);
 
@@ -44,12 +44,14 @@
 .main-nav__logo {
   text-align: center;
   height: 56px;
+  z-index: 1;
 }
 
 .main-nav__burger-input,
 .main-nav__burger-lines {
   top: 17px;
   right: 20px;
+  z-index: 2;
 }
 
 .main-nav__burger-input:checked ~ .main-nav__list {

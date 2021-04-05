@@ -1,14 +1,26 @@
 @import url("page-header.less");
+@import url("main-title.less");
 @import url("general-rules.less");
 @import url("main-nav.less");
 @import url("button-burger.less");
+@import url("recommendation.less");
+@import url("advantages.less");
+@import url("advantage.less");
+@import url("find-hotels.less");
+@import url("button.less");
+@import url("social.less");
+@import url("page-footer.less");
+@import url("copyright.less");
 
 // Colors
-@alternative-text-color: #fff;
+@text-color: #000000;
+@text-alt-color: #ffffff;
 @background-color: #81B3D2;
 @background-color-darken: #669EC0;
 @background-color-dark: #5496BD;
+@background-alt-color: #EEEEEE;
 @border-color: #010101;
+@line-color: #D6D6D6;
 
 @font-face {
   font-family: "PTSans";
@@ -22,9 +34,12 @@
     url("../fonts/ptsansbold.woff2") format("woff2");
 }
 
+html {
+  font-size: 14px;
+  font-family: "PTSans", "Arial", sans-serif;
+}
+
 body {
   margin: 0;
   background: #ffffff;
-  font-size: 14px;
-  font-family: "PTSans", sans-serif;
 }
