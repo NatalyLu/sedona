@@ -6,6 +6,24 @@
   color: @text-alt-color;
   padding: 15px 32px;
   border: none;
+  outline: none;
   background-color: @background-color;
   cursor: pointer;
+
+  &:hover {
+    background-color: @background-color-darken;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @background-color-dark;
+
+    span {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    background-color: @disabled-color;
+  }
 }
