@@ -9,10 +9,24 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 370px, 50% 100%, 0% 370px);
+  clip-path: polygon(0 0, 100% 0, 100% 138px, 50% 100%, 0% 138px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 158px;
+
+  img {
+    width: 100%;
+    max-width: 230px;
+  }
+}
+
+.page-header__wrapper--index {
   min-height: 390px;
+  clip-path: polygon(0 0, 100% 0, 100% 370px, 50% 100%, 0% 370px);
+
+  img {
+    max-width: 282px;
+  }
 }
