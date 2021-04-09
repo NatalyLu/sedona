@@ -1,0 +1,72 @@
+.button-burger {
+  position: absolute;
+  opacity: 0;
+}
+
+.button-burger__lines {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  position: absolute;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.button-burger__line {
+  &,
+  &::before,
+  &::after {
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    top: 50%;
+    margin-top: -2px;
+    background-color: @background-color;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    transition-duration: 0.7s;
+  }
+
+  &::before {
+    transform: translateY(-9px);
+  }
+
+  &::after {
+    transform: translateY(9px);
+  }
+}
+
+.button-burger:checked {
+  ~ .button-burger__lines > .button-burger__line,
+  ~ .button-burger__lines > .button-burger__line::before,
+  ~ .button-burger__lines > .button-burger__line::after {
+    background-color: @text-alt-color;
+  }
+
+  ~ .button-burger__lines > .button-burger__line {
+    height: 0;
+  }
+
+  ~ .button-burger__lines > .button-burger__line::before,
+  ~ .button-burger__lines > .button-burger__line::after {
+    width: 26px;
+    height: 4px;
+  }
+
+  ~ .button-burger__lines > .button-burger__line::before {
+    transform: rotate(45deg);
+  }
+
+  ~ .button-burger__lines > .button-burger__line::after {
+    transform: rotate(-45deg);
+  }
+}

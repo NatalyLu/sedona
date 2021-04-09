@@ -1,0 +1,24 @@
+.social {
+  .drop__list-style;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  background-color: @background-color;
+
+  &:hover {
+    background-color: @background-color-darken;
+  }
+
+  &:active {
+    background-color: @background-color-dark;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+}

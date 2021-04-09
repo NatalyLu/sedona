@@ -1,0 +1,24 @@
+.copyright {
+  font-size: 1rem;
+  line-height: 1.86rem;
+}
+
+.copyright__text {
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.copyright__link {
+  display: block;
+  width: 27px;
+  height: 34px;
+
+  &:hover svg path {
+    fill: @background-color;
+  }
+
+  &:active svg path {
+    fill: @text-color;
+    opacity: 0.3;
+  }
+}
