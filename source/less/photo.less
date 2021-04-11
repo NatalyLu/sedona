@@ -1,0 +1,38 @@
+.photo img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin-bottom: 11px;
+}
+
+.photo__info {
+  line-height: 1.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo__title {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+
+.photo__author {
+  margin: 0 0 13px 0;
+}
+
+.photo__likes {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  padding-left: 37px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 23px;
+    height: 21px;
+    background-image: url("/img/icons/like-icon.svg");
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+}

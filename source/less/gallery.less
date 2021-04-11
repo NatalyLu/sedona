@@ -1,0 +1,33 @@
+.gallery {
+  margin-bottom: 30px;
+}
+
+.gallery__title {
+  text-align: center;
+  margin: 0 10px 25px 10px;
+}
+
+.gallery__description {
+  line-height: 1.7rem;
+  padding-bottom: 30px;
+  margin: 0 10px 20px 10px;
+  border-bottom: 1px solid rgba(@border-color, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.gallery__list {
+  .drop__list-style;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__item {
+  padding: 0 20px 15px 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgba(@border-color, 0.1);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

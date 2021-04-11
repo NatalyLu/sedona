@@ -1,0 +1,42 @@
+.range {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 22px;
+  position: relative;
+}
+
+.range__input {
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  background: rgba(@text-alt-color, 0.2);
+  outline: none;
+  display: block;
+
+  &::-moz-range-thumb {
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background: @text-alt-color;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  &:active::-moz-range-thumb {
+    transform: scale(1.2);
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background: @text-alt-color;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  &:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+}
