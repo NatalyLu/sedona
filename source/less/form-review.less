@@ -1,0 +1,255 @@
+.form-review__fieldset {
+  padding: 20px 20px 0 20px;
+  margin: 0 0 26px 0;
+  border: none;
+  border-top: 1px solid rgba(@border-color, 0.1);
+}
+
+.form-review__fieldset--fio .form-review__field:last-child {
+  margin-bottom: 0;
+}
+
+// ТЕКСТОВЫЕ ИНПУТЫ
+.form-review__title {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.form-review__field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-review__label {
+  line-height: 1.86rem;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.form-review__text {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.86rem;
+  display: inline-block;
+  width: 100%;
+  min-height: 58px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: @background-btns-color;
+
+  &::placeholder {
+    color: @text-color;
+  }
+
+  &:hover:not(:focus) {
+    background-color: @disabled-color;
+  }
+
+  &:focus {
+    background-color: @text-alt-color;
+    outline: 4px solid @disabled-color;
+  }
+}
+
+.form-review__fieldset--contacts {
+  .form-review__field {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-review__label {
+    margin: 0 0 8px 20px;
+  }
+}
+
+.form-review__field--phone,
+.form-review__field--email {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    background-color: @background-icons-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.form-review__field--phone::after {
+  background-image: url("/img/icons/phone.svg");
+  background-size: 18px 18px;
+}
+
+.form-review__field--email::after {
+  background-image: url("/img/icons/mail.svg");
+  background-size: 16px 12px;
+}
+
+// РАДИОБАТОНЫ
+.form-review__radio {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.86rem;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-review__label-radio {
+  position: relative;
+  padding-left: 76px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    border-radius: 50%;
+    background-color: @background-btns-color;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: 15px;
+    border-radius: 50%;
+    background-color: @svg-fill;
+  }
+
+  &:hover::before {
+    background-color: @disabled-color;
+  }
+}
+
+.form-review__input-radio {
+  display: none;
+
+  &:checked {
+    & ~ .form-review__label-radio::after {
+      display: block;
+    }
+
+    &:active ~ .form-review__label-radio::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active ~ .form-review__label-radio::before {
+    background-color: @checkbox-active-color;
+  }
+}
+
+// ЧЕКБОКСЫ
+.form-review__checkbox {
+  margin: 0 0 30px 0;
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.86rem;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-review__label-checkbox {
+  padding-left: 76px;
+  min-height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 0;
+    background-color: @background-btns-color;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 14px;
+    top: calc(50% - 12px);
+    left: 20px;
+    border-bottom: 3px solid #000000;
+    border-right: 3px solid #000000;
+    transform: rotate(45deg);
+    background-color: transparent;
+  }
+
+  &:hover::before {
+    background-color: @disabled-color;
+  }
+}
+
+.form-review__input-checkbox {
+  display: none;
+
+  &:checked {
+    & ~ .form-review__label-checkbox::after {
+      display: block;
+    }
+
+    &:active ~ .form-review__label-checkbox::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active ~ .form-review__label-checkbox::before {
+    background-color: @checkbox-active-color;
+  }
+}
+
+// TEXTAREA
+.form-review__fieldset--comment {
+  margin-bottom: 51px;
+}
+
+.form-review__text--textarea {
+  height: 160px;
+  width: 100%;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+// КНОПКА
+.form-review__button {
+  margin: 0 20px;
+}
+
+// ПРИМЕЧАНИЕ
+.form-review__tip {
+  margin: 0;
+  height: 0;
+  visibility: hidden;
+}
