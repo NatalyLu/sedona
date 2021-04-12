@@ -2,20 +2,34 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 20px;
+  }
 }
 
 .main-nav__list {
   .drop__list-style;
   flex-direction: column;
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }
 
 .main-nav__item {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 1.286rem;
+  line-height: 2.86rem;
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font-size: 1.125rem;
-  line-height: 2.5rem;
   padding: 10px 20px 5px 20px;
   text-align: center;
   text-transform: uppercase;
@@ -40,12 +54,73 @@
       opacity: 0.3;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 1rem;
+    line-height: 1.86rem;
+    color: @text-color;
+    padding: 16px 20px 14px 20px;
+    min-width: 140px;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      &:not(.main-nav__item--active) {
+        background-color: transparent;
+        color: @background-color;
+      }
+    }
+
+    &:active {
+      &:not(.main-nav__item--active) {
+        background-color: transparent;
+        color: @text-color;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.main-nav__item--active {
+  color: @text-active-color;
+
+  &:hover {
+    color: @text-active-hover-color;
+  }
+
+  &:active {
+    color: @text-active-color;
+    opacity: 0.3;
+  }
+}
+
+.main-nav__item--logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 140px;
+  }
 }
 
 .main-nav__logo {
   text-align: center;
   height: 56px;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 97px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .main-nav__burger-input,
@@ -53,6 +128,10 @@
   top: 17px;
   right: 20px;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__burger-input:checked ~ .main-nav__list {
