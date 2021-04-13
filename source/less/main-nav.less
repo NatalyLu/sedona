@@ -18,8 +18,13 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 1;
+
+    li {
+      width: 20%;
+    }
   }
 }
 
@@ -59,8 +64,7 @@
     font-size: 1rem;
     line-height: 1.86rem;
     color: @text-color;
-    padding: 16px 20px 14px 20px;
-    min-width: 140px;
+    padding: 16px 5px 14px 5px;
     background-color: transparent;
     border: none;
 
