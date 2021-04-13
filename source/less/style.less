@@ -16,18 +16,28 @@
 @import url("presentation.less");
 @import url("controls.less");
 @import url("range.less");
+@import url("reviews.less");
+@import url("form-review.less");
+
+// Viewports
+@tablet-width: 768px;
+@desktop-width: 1200px;
 
 // Colors
 @text-color: #000000;
 @text-alt-color: #ffffff;
+@text-active-color: #766357;
+@text-active-hover-color: #604E43;
 @background-color: #81B3D2;
 @background-color-darken: #669EC0;
 @background-color-dark: #5496BD;
 @background-alt-color: #EEEEEE;
 @background-btns-color: #F2F2F2;
+@background-icons-color: #E6E6E6;
 @border-color: #010101;
 @line-color: #D6D6D6;
 @disabled-color: #E5E5E5;
+@checkbox-active-color: #D5D5D5;
 @svg-fill: #333333;
 
 @font-face {
@@ -45,9 +55,18 @@
 html {
   font-size: 14px;
   font-family: "PTSans", "Arial", sans-serif;
+
+  @media (min-width: @desktop-width) {
+    background-color: @background-btns-color;
+  }
 }
 
 body {
   margin: 0;
   background: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 40px;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
 }

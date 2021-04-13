@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -19,6 +20,9 @@
           <li>
             <a class="main-nav__item" href="catalog.html">Фото и видео</a>
           </li>
+          <li class="main-nav__item main-nav__item--logo">
+            <span class="visually-hidden">Место под логотип</span>
+          </li>
           <li>
             <a class="main-nav__item" href="form.html">Форма Отзыва</a>
           </li>
@@ -27,7 +31,10 @@
           </li>
         </ul>
         <a class="main-nav__logo">
-          <img src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+          <picture>
+            <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)">
+            <img src="img/logo-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+          </picture>
         </a>
       </nav>
       <div class="page-header__wrapper page-header__wrapper--index">
