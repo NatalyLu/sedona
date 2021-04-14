@@ -47,13 +47,17 @@
         <h2 class="visually-hidden">Преимущества Седоны перед Гранд Каньоном</h2>
         <p class="advantages__description"><b class="advantages__main-description">СЕДОНА — небольшой  городок в АРИЗОНЕ, заслуживающий большего!</b> Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <ul class="advantages__list">
-          <li class="advantage">
+          <li class="advantage advantage--with-img">
             <div class="advantage__text">
               <h3 class="main-title advantage__title">НАСТОЯЩИЙ ГОРОДОК</h3>
               <span class="advantage__number">— №1 —</span>
               <p class="advantage__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <img class="advantage__img" src="img/background-imgs/photo-city@1x1.jpg" width="520" height="260" alt="Фото Города">
+            <picture>
+              <source srcset="img/background-imgs/photo-city-desktop@1x1.jpg" media="(min-width: 1200px)">
+              <source srcset="img/background-imgs/photo-city-tablet@1x1.jpg" media="(min-width: 768px)">
+              <img class="advantage__img" src="img/background-imgs/photo-city-mobile@1x1.jpg" width="520" height="260" alt="Фото Города">
+            </picture>
             <ul class="recommendation advantage__recommendation">
               <li class="recommendation__item recommendation__item--apartment">
                 <h4 class="main-title recommendation__title">Жилье</h4>
@@ -61,21 +65,25 @@
               </li>
               <li class="recommendation__item recommendation__item--souvenir">
                 <h4 class="main-title recommendation__title">СУВЕНИРЫ</h4>
-                <p class="recommendation__description">Не только китайского, но и местного производства!</p>
+                <p class="recommendation__description">Не только китайского, но и&nbsp;местного производства!</p>
               </li>
               <li class="recommendation__item recommendation__item--food">
                 <h4 class="main-title recommendation__title">ЕДА</h4>
-                <p class="recommendation__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                <p class="recommendation__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы&nbsp;НЕ&nbsp;разочаруетесь!</p>
               </li>
             </ul>
           </li>
-          <li class="advantage">
+          <li class="advantage advantage--with-img advantage--with-img-rev">
             <div class="advantage__text">
               <h3 class="main-title advantage__title">ТАМ ЕСТЬ Мост дьявола</h3>
               <span class="advantage__number">— №2 —</span>
               <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantage__img" src="img/background-imgs/photo-bridge@1x1.jpg" width="520" height="260" alt="Фото Города">
+            <picture>
+              <source srcset="img/background-imgs/photo-bridge-desktop@1x1.jpg" media="(min-width: 1200px)">
+              <source srcset="img/background-imgs/photo-bridge-tablet@1x1.jpg" media="(min-width: 768px)">
+              <img class="advantage__img" src="img/background-imgs/photo-bridge-mobile@1x1.jpg" width="520" height="260" alt="Фото Города">
+            </picture>
           </li>
           <li class="advantage advantage--alternative-style">
             <div class="advantage__text">
@@ -88,7 +96,7 @@
             <div class="advantage__text">
               <h3 class="main-title advantage__title">КРАСИВАЯ ДОРОГА</h3>
               <span class="advantage__number">— №4 —</span>
-              <p class="advantage__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+              <p class="advantage__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ&nbsp;СКУЧНО!</p>
             </div>
           </li>
           <li class="advantage advantage--alternative-style">
@@ -101,11 +109,17 @@
         </ul>
       </section>
       <section class="find-hotels">
-        <h2 class="main-title find-hotels__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-        <p class="find-hotels__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button class="button find-hotels__button" type="button"><span>НАЙТИ гостиницу</span></button>
+        <div class="find-hotels__wrapper">
+          <h2 class="main-title find-hotels__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
+          <p class="find-hotels__description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
+          <button class="button find-hotels__button" type="button"><span>НАЙТИ гостиницу</span></button>
+        </div>
         <div class="find-hotels__map">
-          <img src="img/map/map-mobile.jpg" width="320" height="350" alt="Карта">
+          <picture>
+            <source srcset="img/map/map-desktop.jpg" media="(min-width: 1200px)">
+            <source srcset="img/map/map-tablet.jpg" media="(min-width: 768px)">
+            <img src="img/map/map-mobile.jpg" width="320" height="350" alt="Карта">
+          </picture>
         </div>
       </section>
     </main>

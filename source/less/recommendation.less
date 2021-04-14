@@ -1,15 +1,12 @@
 .recommendation {
   .drop__list-style;
-
-  .recommendation__item:last-child {
-    margin: 0;
-  }
 }
 
 .recommendation__item {
   padding-left: 50px;
   margin: 0 0 20px 0;
   position: relative;
+  display: block;
 
   &::after {
     content: "";
@@ -18,27 +15,86 @@
     position: absolute;
     top: -10px;
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      height: 75px;
+      top: 0;
+      background-position: center bottom;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 193px;
+    padding-left: 0;
+    padding-top: 101px;
+    text-align: center;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 282px;
+  }
+
+  &:last-child {
+    margin: 0;
   }
 }
 
-.recommendation__item--apartment::after {
-  background-image: url("/img/icons/icon-house.svg");
-  left: 0;
+.recommendation__item--apartment {
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+
+  &::after {
+    background-image: url("/img/icons/icon-house.svg");
+    left: 0;
+  }
 }
 
-.recommendation__item--souvenir::after {
-  background-image: url("/img/icons/icon-gift.svg");
-  left: 5px;
+.recommendation__item--souvenir {
+  &::after {
+    background-image: url("/img/icons/icon-gift.svg");
+    left: 5px;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 268px;
+  }
 }
 
-.recommendation__item--food::after {
-  background-image: url("/img/icons/icon-burger.svg");
-  top: -5px;
-  left: -2px;
+.recommendation__item--food {
+  &::after {
+    background-image: url("/img/icons/icon-burger.svg");
+    top: -5px;
+    left: -2px;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }
 
 .recommendation__title {
   margin: 0 0 20px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 1.5rem;
+  }
 }
 
 .recommendation__description {

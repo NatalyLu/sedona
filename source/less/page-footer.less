@@ -4,11 +4,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 36px 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 20px;
+    justify-content: space-around;
+  }
 }
 
 .page-footer__logo {
   font-size: 1.5rem;
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__social {
@@ -22,6 +38,10 @@
 
   .social__item:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }
 
