@@ -4,6 +4,16 @@
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 100px;
+  }
+}
+
+.page-header--index {
+  @media (min-width: @tablet-width) {
     margin-bottom: 43px;
   }
 
@@ -27,10 +37,26 @@
   img {
     width: 100%;
     max-width: 230px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 457px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+    background-image: url("/img/background-imgs/back-desktop.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 260px, 95% 265px, 95% 243px, 50% 100%, 5% 243px, 5% 265px, 0% 260px);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 300px;
+    clip-path: polygon(0 0, 100% 0, 100% 243px, 84% 265px, 84% 243px, 50% 100%, 16% 243px, 16% 265px, 0% 243px);
   }
 }
 
-.page-header__wrapper--index {
+.page-header--index .page-header__wrapper {
   min-height: 390px;
   clip-path: polygon(0 0, 100% 0, 100% 370px, 50% 100%, 0% 370px);
 
@@ -45,11 +71,10 @@
 
   @media (min-width: @tablet-width) {
     min-height: 518px;
-    background-image: url("/img/background-imgs/back-desktop.jpg");
     clip-path: polygon(0 0, 100% 0, 100% 475px, 95% 480px, 95% 460px, 50% 100%, 5% 460px, 5% 480px, 0% 475px);
   }
 
   @media (min-width: @desktop-width) {
-    clip-path: polygon(0 0, 100% 0, 100% 460px, 80% 485px, 80% 460px, 50% 100%, 20% 460px, 20% 485px, 0% 460px);
+    clip-path: polygon(0 0, 100% 0, 100% 460px, 84% 485px, 84% 460px, 50% 100%, 16% 460px, 16% 485px, 0% 460px);
   }
 }

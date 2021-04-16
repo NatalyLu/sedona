@@ -5,16 +5,38 @@
 .reviews__title {
   text-align: center;
   margin: 0 10px 25px 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 2.14rem;
+    line-height: 1.86rem;
+    margin: 0 60px 25px 60px;
+  }
 }
 
 .reviews__description {
   line-height: 1.7rem;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 10px 16px 10px;
+  padding: 0 10px;
+  margin: 0 auto 16px auto;
+  max-width: 435px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .reviews__form {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
 }
