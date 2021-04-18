@@ -47,7 +47,7 @@
         <p class="reviews__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="reviews__form form-review" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-review__fieldset form-review__fieldset--fio">
-            <h3 class="main-title form-review__title">Представьтесь:</h3>
+            <h3 class="main-title form-review__title"><span class="form-review__title--text">Представьтесь:</span></h3>
             <p class="form-review__field">
               <label class="form-review__label" for="first-name">ИМЯ*:</label>
               <input class="form-review__text" id="first-name" type="text" name="name" placeholder="Петр" required>
@@ -62,7 +62,7 @@
             </p>
           </fieldset>
           <fieldset class="form-review__fieldset form-review__fieldset--contacts">
-            <h3 class="main-title form-review__title">Контактная информация:</h3>
+            <h3 class="main-title form-review__title"><span class="form-review__title--text">Контактная информация:</span></h3>
             <p class="form-review__field form-review__field--phone">
               <label class="form-review__label" for="phone">Контактный телефон*:</label>
               <input class="form-review__text" id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
@@ -73,7 +73,7 @@
             </p>
           </fieldset>
           <fieldset class="form-review__fieldset form-review__fieldset--impression">
-            <h3 class="main-title form-review__title">ВАше Общее впечатление:</h3>
+            <h3 class="main-title form-review__title"><span class="form-review__title--text">ВАше Общее впечатление:</span></h3>
             <p class="form-review__radio">
               <input class="form-review__input-radio" id="positive" type="radio" name="impression" value="positive" checked>
               <label class="form-review__label-radio" for="positive">Скорее положительное</label>
@@ -88,26 +88,28 @@
             </p>
           </fieldset>
           <fieldset class="form-review__fieldset form-review__fieldset--visited">
-            <h3 class="main-title form-review__title">посещенные достопримечательности:</h3>
-            <p class="form-review__checkbox">
-              <input class="form-review__input-checkbox" id="bridge" type="checkbox" name="visited" value="devils-bridge" checked>
-              <label class="form-review__label-checkbox" for="bridge">Мост Дьявола</label>
-            </p>
-            <p class="form-review__checkbox">
-              <input class="form-review__input-checkbox" id="mountain" type="checkbox" name="visited" value="bell-mountain" checked>
-              <label class="form-review__label-checkbox" for="mountain">Гора-Колокол</label>
-            </p>
-            <p class="form-review__checkbox">
-              <input class="form-review__input-checkbox" id="park" type="checkbox" name="visited" value="slide-park" checked>
-              <label class="form-review__label-checkbox" for="park">Слайд-парк</label>
-            </p>
-            <p class="form-review__checkbox">
-              <input class="form-review__input-checkbox" id="red-rocks" type="checkbox" name="visited" value="red-rocks">
-              <label class="form-review__label-checkbox" for="red-rocks">Красные скалы</label>
-            </p>
+            <h3 class="main-title form-review__title"><span class="form-review__title--text">посещенные достопримечательности:</span></h3>
+            <div class="form-review__wrapper--visited">
+              <p class="form-review__checkbox">
+                <input class="form-review__input-checkbox" id="bridge" type="checkbox" name="visited" value="devils-bridge" checked>
+                <label class="form-review__label-checkbox" for="bridge">Мост Дьявола</label>
+              </p>
+              <p class="form-review__checkbox">
+                <input class="form-review__input-checkbox" id="mountain" type="checkbox" name="visited" value="bell-mountain" checked>
+                <label class="form-review__label-checkbox" for="mountain">Гора-Колокол</label>
+              </p>
+              <p class="form-review__checkbox">
+                <input class="form-review__input-checkbox" id="park" type="checkbox" name="visited" value="slide-park" checked>
+                <label class="form-review__label-checkbox" for="park">Слайд-парк</label>
+              </p>
+              <p class="form-review__checkbox">
+                <input class="form-review__input-checkbox" id="red-rocks" type="checkbox" name="visited" value="red-rocks">
+                <label class="form-review__label-checkbox" for="red-rocks">Красные скалы</label>
+              </p>
+            </div>
           </fieldset>
           <fieldset class="form-review__fieldset form-review__fieldset--comment">
-            <h3 class="main-title form-review__title">Опишите свои эмоции:</h3>
+            <h3 class="main-title form-review__title"><span class="form-review__title--text">Опишите свои эмоции:</span></h3>
             <textarea class="form-review__text form-review__text--textarea" name="comment" rows="7" cols="33">Опишите подробно все свои восторги</textarea>
           </fieldset>
           <button class="button form-review__button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>

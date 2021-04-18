@@ -6,29 +6,53 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin: 0;
     border-top: none;
   }
-}
-
-.form-review__fieldset--fio .form-review__field:last-child {
-  margin-bottom: 0;
 }
 
 // ТЕКСТОВЫЕ ИНПУТЫ
 .form-review__title {
   text-align: center;
   margin: 0 0 20px 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 1.5rem;
     line-height: 1.86rem;
+    margin: 0 0 50px 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc((100% - 400px) / 2); // 350px - максимальная ширина контента + 50px отступ
+      height: 1px;
+      background-color: rgba(@border-color, 0.1);
+    }
+
+    &::before {
+      top: 50%;
+      left: 0;
+    }
+
+    &::after {
+      top: 50%;
+      right: 0;
+    }
   }
+}
+
+.form-review__title--text {
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
 }
 
 .form-review__field {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   width: 100%;
 }
 
@@ -65,8 +89,40 @@
 }
 
 .form-review__fieldset--fio {
+  .form-review__field:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
     order: 2;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      left: -13%;
+      top: 0;
+      background-color: rgba(@border-color, 0.1);
+    }
+  }
+
+  .form-review__title {
+    @media (min-width: @tablet-width) {
+      text-align: left;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .form-review__title--text {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
   }
 }
 
@@ -78,6 +134,16 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .form-review__title {
+    @media (min-width: @tablet-width) {
+      margin: 0 0 20px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 0 70px 0;
     }
   }
 
@@ -123,6 +189,23 @@
   @media (min-width: @tablet-width) {
     order: 1;
   }
+
+  .form-review__title {
+    @media (min-width: @tablet-width) {
+      text-align: left;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .form-review__title--text {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
+  }
 }
 
 .form-review__radio {
@@ -135,6 +218,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 30px 0;
   }
 }
 
@@ -191,12 +278,27 @@
 }
 
 // ЧЕКБОКСЫ
-
 .form-review__fieldset--visited {
   @media (min-width: @tablet-width) {
     order: 4;
     grid-column-start: 1;
     grid-column-end: -1;
+  }
+}
+
+.form-review__wrapper--visited {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+    max-width: 490px;
+    margin: 0 auto;
+  }
+
+  .form-review__checkbox {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
   }
 }
 
