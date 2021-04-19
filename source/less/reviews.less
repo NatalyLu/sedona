@@ -1,5 +1,13 @@
 .reviews {
   margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .reviews__title {
@@ -32,8 +40,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-column-gap: 75px;
-    grid-row-gap: 70px;
+    grid-row-gap: 50px;
     grid-template-columns: 1fr 1fr;
     padding: 0 60px;
   }

@@ -11,6 +11,7 @@
   }
 }
 
+// ******************************************
 // ТЕКСТОВЫЕ ИНПУТЫ
 .form-review__title {
   text-align: center;
@@ -43,7 +44,7 @@
   }
 }
 
-.form-review__title--text {
+.form-review__title-text {
   max-width: 350px;
   display: block;
   margin: 0 auto;
@@ -88,6 +89,8 @@
   }
 }
 
+// ******************************************
+// FIO
 .form-review__fieldset--fio {
   .form-review__field:last-child {
     margin-bottom: 0;
@@ -96,13 +99,15 @@
   @media (min-width: @tablet-width) {
     order: 2;
     position: relative;
+    margin-bottom: 20px;
+    padding-left: 55px;
 
     &::after {
       content: "";
       position: absolute;
       height: 100%;
       width: 1px;
-      left: -13%;
+      left: -0;
       top: 0;
       background-color: rgba(@border-color, 0.1);
     }
@@ -119,20 +124,36 @@
     }
   }
 
-  .form-review__title--text {
+  .form-review__title-text {
     @media (min-width: @tablet-width) {
       margin: 0;
     }
   }
 }
 
+// ******************************************
+// CONTACTS
 .form-review__fieldset--contacts {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
   .form-review__field {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
 
     &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: center;
       margin-bottom: 0;
     }
   }
@@ -149,12 +170,32 @@
 
   .form-review__label {
     margin: 0 0 8px 20px;
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+    }
   }
 
-  @media (min-width: @tablet-width) {
-    order: 3;
-    grid-column-start: 1;
-    grid-column-end: -1;
+  .form-review__text {
+    padding: 16px 62px 16px 20px;
+
+    @media (min-width: @desktop-width) {
+      width: 316px;
+    }
+  }
+
+  .hidden {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.form-review__wrapper-contacts {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 
@@ -177,6 +218,10 @@
 .form-review__field--phone::after {
   background-image: url("/img/icons/phone.svg");
   background-size: 18px 18px;
+
+  @media (min-width: @desktop-width) {
+    right: 80px;
+  }
 }
 
 .form-review__field--email::after {
@@ -184,44 +229,18 @@
   background-size: 16px 12px;
 }
 
+// ******************************************
 // РАДИОБАТОНЫ
-.form-review__fieldset--impression {
-  @media (min-width: @tablet-width) {
-    order: 1;
-  }
-
-  .form-review__title {
-    @media (min-width: @tablet-width) {
-      text-align: left;
-
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  .form-review__title--text {
-    @media (min-width: @tablet-width) {
-      margin: 0;
-    }
-  }
-}
-
 .form-review__radio {
   font-family: "PTSans-Bold", "Arial", sans-serif;
   font-size: 1.3rem;
   line-height: 1.86rem;
-  margin: 0 0 20px 0;
+  margin: 0;
   display: flex;
   align-items: center;
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    margin: 0 0 30px 0;
   }
 }
 
@@ -277,33 +296,46 @@
   }
 }
 
-// ЧЕКБОКСЫ
-.form-review__fieldset--visited {
+// ******************************************
+// IMPRESSION
+.form-review__fieldset--impression {
   @media (min-width: @tablet-width) {
-    order: 4;
-    grid-column-start: 1;
-    grid-column-end: -1;
-  }
-}
-
-.form-review__wrapper--visited {
-  @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 60px;
-    max-width: 490px;
-    margin: 0 auto;
+    order: 1;
   }
 
-  .form-review__checkbox {
+  .form-review__title {
+    @media (min-width: @tablet-width) {
+      text-align: left;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .form-review__title-text {
     @media (min-width: @tablet-width) {
       margin: 0;
     }
   }
 }
 
+.form-review__wrapper-impression {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: start;
+  gap: 24px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+}
+
+// ******************************************
+// ЧЕКБОКСЫ
 .form-review__checkbox {
-  margin: 0 0 30px 0;
+  margin: 0;
   font-family: "PTSans-Bold", "Arial", sans-serif;
   font-size: 1.3rem;
   line-height: 1.86rem;
@@ -368,17 +400,43 @@
   }
 }
 
-// TEXTAREA
-.form-review__fieldset--comment {
-  margin-bottom: 51px;
-
+// ******************************************
+// VISITED
+.form-review__fieldset--visited {
   @media (min-width: @tablet-width) {
-    order: 5;
+    order: 4;
     grid-column-start: 1;
     grid-column-end: -1;
+    margin-bottom: 20px;
   }
 }
 
+.form-review__wrapper-visited {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: start;
+  gap: 34px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+  }
+
+  .form-review__checkbox {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
+  }
+}
+
+// ******************************************
+// TEXTAREA
 .form-review__text--textarea {
   height: 160px;
   width: 100%;
@@ -387,22 +445,44 @@
   resize: none;
 }
 
+// ******************************************
+// COMMENT
+.form-review__fieldset--comment {
+  margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 0;
+  }
+}
+
+// ******************************************
 // КНОПКА
 .form-review__button {
   margin: 0 20px;
 
   @media (min-width: @tablet-width) {
     order: 6;
+    margin: 0;
   }
 }
 
+// ******************************************
 // ПРИМЕЧАНИЕ
 .form-review__tip {
+  line-height: 1.86rem;
+  text-transform: uppercase;
   margin: 0;
   height: 0;
   visibility: hidden;
 
   @media (min-width: @tablet-width) {
+    visibility: visible;
+    height: auto;
+    align-self: center;
+    justify-self: end;
     order: 7;
   }
 }
