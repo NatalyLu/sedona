@@ -86,15 +86,17 @@
 }
 
 .main-nav__item--active {
-  color: @text-active-color;
-
-  &:hover {
-    color: @text-active-hover-color;
-  }
-
-  &:active {
+  @media (min-width: @tablet-width) {
     color: @text-active-color;
-    opacity: 0.3;
+
+    &:hover {
+      color: @text-active-hover-color;
+    }
+
+    &:active {
+      color: @text-active-color;
+      opacity: 0.3;
+    }
   }
 }
 
