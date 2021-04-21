@@ -3,7 +3,7 @@
   opacity: 0;
 }
 
-.button-burger__lines {
+.button-burger-lines {
   width: 23px;
   height: 23px;
   cursor: pointer;
@@ -12,13 +12,9 @@
   &:hover {
     opacity: 0.6;
   }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
-.button-burger__line {
+.button-burger-line {
   &,
   &::before,
   &::after {
@@ -46,27 +42,33 @@
 }
 
 .button-burger:checked {
-  ~ .button-burger__lines > .button-burger__line,
-  ~ .button-burger__lines > .button-burger__line::before,
-  ~ .button-burger__lines > .button-burger__line::after {
+  ~ .button-burger-lines > .button-burger-line,
+  ~ .button-burger-lines > .button-burger-line::before,
+  ~ .button-burger-lines > .button-burger-line::after {
     background-color: @text-alt-color;
   }
 
-  ~ .button-burger__lines > .button-burger__line {
+  ~ .button-burger-lines > .button-burger-line {
     height: 0;
   }
 
-  ~ .button-burger__lines > .button-burger__line::before,
-  ~ .button-burger__lines > .button-burger__line::after {
+  ~ .button-burger-lines > .button-burger-line::before,
+  ~ .button-burger-lines > .button-burger-line::after {
     width: 26px;
     height: 4px;
   }
 
-  ~ .button-burger__lines > .button-burger__line::before {
+  ~ .button-burger-lines > .button-burger-line::before {
     transform: rotate(45deg);
   }
 
-  ~ .button-burger__lines > .button-burger__line::after {
+  ~ .button-burger-lines > .button-burger-line::after {
     transform: rotate(-45deg);
   }
+}
+
+
+.button-burger:active ~ .button-burger-lines,
+.button-burger:focus ~ .button-burger-lines {
+  opacity: 0.3;
 }
