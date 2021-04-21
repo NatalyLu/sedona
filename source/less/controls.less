@@ -10,6 +10,20 @@
   margin-top: -45px;
   z-index: 1;
 
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0 35px;
+    grid-template-columns: 48px 1fr 64px 41px;//0.6fr 5fr 0.8fr 0.6fr;
+    grid-template-areas: "repeat range sub full";
+    grid-template-rows: 93px;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    top: -93px;
+    margin-bottom: -93px;
+    background-color: rgba(@text-color, 0.6);
+  }
+
   &::after {
     content: "";
     z-index: -1;
@@ -19,6 +33,10 @@
     left: 0;
     bottom: 0;
     background-color: @background-btns-color;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -29,8 +47,19 @@
   padding: 0;
   background-color: transparent;
 
+  @media (min-width: @tablet-width) {
+    svg path {
+      fill: @text-alt-color;
+    }
+  }
+
   &:hover svg path {
     fill: @svg-fill;
+
+    @media (min-width: @tablet-width) {
+      fill: @text-alt-color;
+      opacity: 0.6;
+    }
   }
 
   &:active svg {
@@ -40,19 +69,21 @@
 
 .controls__button--repeat {
   grid-area: repeat;
+  justify-self: start;
 }
 
 .controls__range {
   grid-area: range;
   width: 100%;
   height: 45px;
-  background-color: rgba(@text-color, 0.6);
 }
 
 .controls__button--sub {
   grid-area: sub;
+  justify-self: end;
 }
 
 .controls__button--fullscreen {
   grid-area: full;
+  justify-self: end;
 }
