@@ -284,12 +284,14 @@
       display: block;
     }
 
-    &:active ~ .form-review__label-radio::after {
+    &:active ~ .form-review__label-radio::after,
+    &:focus ~ .form-review__label-radio::after {
       opacity: 0.3;
     }
   }
 
-  &:active ~ .form-review__label-radio::before {
+  &:active ~ .form-review__label-radio::before,
+  &:focus ~ .form-review__label-radio::before {
     background-color: @checkbox-active-color;
   }
 }
@@ -388,16 +390,17 @@
       display: block;
     }
 
-    &:active ~ .form-review__label-checkbox::after {
+    &:active ~ .form-review__label-checkbox::after,
+    &:focus ~ .form-review__label-checkbox::after {
       opacity: 0.3;
     }
   }
 
-  &:active ~ .form-review__label-checkbox::before {
+  &:active ~ .form-review__label-checkbox::before,
+  &:focus ~ .form-review__label-checkbox::before {
     background-color: @checkbox-active-color;
   }
 }
-
 // ******************************************
 // VISITED
 .form-review__fieldset--visited {
