@@ -29,7 +29,8 @@
     border-radius: 50%;
   }
 
-  &:active::-moz-range-thumb {
+  &:active::-moz-range-thumb,
+  &:focus::-moz-range-thumb {
     transform: scale(1.2);
   }
 
@@ -42,7 +43,8 @@
     border-radius: 50%;
   }
 
-  &:active::-webkit-slider-thumb {
+  &:active::-webkit-slider-thumb,
+  &:focus::-webkit-slider-thumb {
     transform: scale(1.2);
   }
 }
