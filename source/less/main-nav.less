@@ -53,7 +53,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     &:not(.main-nav__item--active) {
       background-color: @background-color-dark;
       opacity: 0.3;
@@ -75,7 +76,8 @@
       }
     }
 
-    &:active {
+    &:active,
+    &:focus {
       &:not(.main-nav__item--active) {
         background-color: transparent;
         color: @text-color;
@@ -93,7 +95,8 @@
       color: @text-active-hover-color;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       color: @text-active-color;
       opacity: 0.3;
     }
