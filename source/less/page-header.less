@@ -45,10 +45,18 @@
     }
   }
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/background-imgs/back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 290px;
     background-image: url("/img/background-imgs/back-desktop.jpg");
     clip-path: polygon(0 0, 100% 0, 100% 260px, 95% 265px, 95% 243px, 50% 100%, 5% 243px, 5% 265px, 0% 260px);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/background-imgs/back-desktop@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
