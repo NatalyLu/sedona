@@ -39,4 +39,27 @@
   width: 100%;
   height: auto;
   display: block;
+  background-image: url("/img/video/video-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/video/video-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("/img/video/video-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/video/video-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("/img/video/video-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/video/video-desktop@2x.jpg");
+    }
+  }
 }
