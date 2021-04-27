@@ -277,7 +277,7 @@
 }
 
 .form-review__input-radio {
-  display: none;
+  .visually-hidden;
 
   &:checked {
     & ~ .form-review__label-radio::after {
@@ -371,8 +371,8 @@
     height: 14px;
     top: calc(50% - 12px);
     left: 20px;
-    border-bottom: 3px solid #000000;
-    border-right: 3px solid #000000;
+    border-bottom: 3px solid @text-color;
+    border-right: 3px solid @text-color;
     transform: rotate(45deg);
     background-color: transparent;
   }
@@ -383,7 +383,7 @@
 }
 
 .form-review__input-checkbox {
-  display: none;
+  .visually-hidden;
 
   &:checked {
     & ~ .form-review__label-checkbox::after {
