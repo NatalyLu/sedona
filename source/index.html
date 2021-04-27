@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" sizes="16x16" href="img/icons/favicons/16.svg">
+    <link rel="icon" sizes="32x32" href="img/icons/favicons/32.svg">
+    <link rel="icon" sizes="152x152" href="img/icons/favicons/152.svg">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -54,9 +57,9 @@
               <p class="advantage__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
             <picture>
-              <source srcset="img/background-imgs/photo-city-desktop@1x1.jpg" media="(min-width: 1200px)">
-              <source srcset="img/background-imgs/photo-city-tablet@1x1.jpg" media="(min-width: 768px)">
-              <img class="advantage__img" src="img/background-imgs/photo-city-mobile@1x1.jpg" width="520" height="260" alt="Фото Города">
+              <source media="(min-width: 1200px)" srcset="img/background-imgs/photo-city-desktop@1x1.jpg 1x, img/background-imgs/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/background-imgs/photo-city-tablet@1x1.jpg 1x, img/background-imgs/photo-city-tablet@2x.jpg 2x">
+              <img class="advantage__img" src="img/background-imgs/photo-city-mobile@1x1.jpg" srcset="img/background-imgs/photo-city-mobile@2x.jpg 2x" width="520" height="260" alt="Фото Города">
             </picture>
             <ul class="recommendation advantage__recommendation">
               <li class="recommendation__item recommendation__item--apartment">
@@ -80,9 +83,9 @@
               <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture>
-              <source srcset="img/background-imgs/photo-bridge-desktop@1x1.jpg" media="(min-width: 1200px)">
-              <source srcset="img/background-imgs/photo-bridge-tablet@1x1.jpg" media="(min-width: 768px)">
-              <img class="advantage__img" src="img/background-imgs/photo-bridge-mobile@1x1.jpg" width="520" height="260" alt="Фото Города">
+              <source media="(min-width: 1200px)" srcset="img/background-imgs/photo-bridge-desktop@1x1.jpg 1x, img/background-imgs/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/background-imgs/photo-bridge-tablet@1x1.jpg 1x, img/background-imgs/photo-bridge-tablet@2x.jpg 2x">
+              <img class="advantage__img" src="img/background-imgs/photo-bridge-mobile@1x1.jpg" srcset="img/background-imgs/photo-bridge-mobile@2x.jpg 2x" width="520" height="260" alt="Фото Города">
             </picture>
           </li>
           <li class="advantage advantage--alternative-style">
@@ -116,9 +119,9 @@
         </div>
         <div class="find-hotels__map">
           <picture>
-            <source srcset="img/map/map-desktop.jpg" media="(min-width: 1200px)">
-            <source srcset="img/map/map-tablet.jpg" media="(min-width: 768px)">
-            <img src="img/map/map-mobile.jpg" width="320" height="350" alt="Карта">
+            <source media="(min-width: 1200px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+            <img src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта">
           </picture>
         </div>
       </section>
