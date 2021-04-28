@@ -3,8 +3,8 @@
 }
 
 .recommendation__item {
-  padding-left: 50px;
-  margin: 0 0 20px 0;
+  padding-left: 45px;
+  margin: 0 0 22px 0;
   position: relative;
   display: block;
 
@@ -13,7 +13,7 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    top: -10px;
+    top: -8px;
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -56,7 +56,8 @@
 .recommendation__item--souvenir {
   &::after {
     background-image: url("/img/icons/icon-gift.svg");
-    left: 5px;
+    left: 2px;
+    top: -10px;
 
     @media (min-width: @tablet-width) {
       left: 0;
@@ -75,8 +76,8 @@
 .recommendation__item--food {
   &::after {
     background-image: url("/img/icons/icon-burger.svg");
-    top: -5px;
-    left: -2px;
+    top: -2px;
+    left: -4px;
 
     @media (min-width: @tablet-width) {
       top: 0;
@@ -90,10 +91,11 @@
 }
 
 .recommendation__title {
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
 }
 
 .recommendation__description {
   margin: 0;
   text-transform: uppercase;
+  line-height: 1.48rem;
 }
