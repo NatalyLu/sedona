@@ -6,7 +6,6 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: center;
-    padding: 0 20px;
   }
 }
 
@@ -35,7 +34,7 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 8px 20px 4px 20px;
+  padding: 10px 20px 5px 20px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -65,7 +64,7 @@
     font-size: 1rem;
     line-height: 1.86rem;
     color: @text-color;
-    padding: 16px 5px 14px 5px;
+    padding: 15px 5px;
     background-color: transparent;
     border: none;
 
@@ -114,11 +113,16 @@
 
 .main-nav__logo {
   text-align: center;
-  height: 53px;
+  height: 55px;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
     position: absolute;
+
+    img {
+      width: 102px;
+      height: 84px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -134,8 +138,8 @@
 
 .main-nav__burger-input,
 .main-nav__burger-lines {
-  top: 15px;
-  right: 19px;
+  top: 17px;
+  right: 21px;
   z-index: 2;
 
   @media (min-width: @tablet-width) {
