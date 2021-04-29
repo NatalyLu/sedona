@@ -4,8 +4,10 @@
   font-size: 1rem;
   line-height: 1.5rem;
 
-  &:first-child .advantage__text {
-    padding-top: 48px;
+  @media (max-width: @tablet-width - 1px) {
+    &:first-child .advantage__text {
+      padding-top: 48px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -104,9 +106,11 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
-    padding: 60px 20px;
+    gap: 60px;
+    padding: 62px 30px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -118,12 +122,13 @@
   position: relative;
 
   .advantage__text {
-    padding: 25px 20px;
+    padding: 25px 35px;
     background: @background-alt-color;
     color: @text-color;
 
     @media (min-width: @tablet-width) {
-      padding: 42px 40px 62px 40px;
+      padding: 42px 40px;
+      justify-content: flex-start;
     }
   }
 
@@ -144,5 +149,11 @@
 
   &:last-child::after {
     display: none;
+  }
+
+  .advantage__description {
+    @media (min-width: @tablet-width) {
+      word-spacing: 0;
+    }
   }
 }
