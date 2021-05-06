@@ -4,9 +4,14 @@
   font-size: 1rem;
   line-height: 1.5rem;
 
-  @media (max-width: @tablet-width - 1px) {
-    &:first-child .advantage__text {
-      padding-top: 48px;
+  &:first-child .advantage__text {
+    //only for mobile
+    @media (max-width: @tablet-width - 1px) {
+      padding-top: 51px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 45px;
     }
   }
 
@@ -56,7 +61,7 @@
 
   @media (min-width: @desktop-width) {
     justify-content: flex-start;
-    padding: 49px 60px;
+    padding: 51px 60px;
   }
 }
 
@@ -67,6 +72,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 150px;
+    margin: 0 0 12px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -127,7 +133,7 @@
   position: relative;
 
   .advantage__text {
-    padding: 25px 35px;
+    padding: 26px 35px;
     background: @background-alt-color;
     color: @text-color;
 
