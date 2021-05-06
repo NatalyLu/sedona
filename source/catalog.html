@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--catalog">
       <nav class="main-nav">
         <input class="button-burger main-nav__burger-input" id="burger" type="checkbox" value="Открыть меню">
         <label  class="button-burger-lines main-nav__burger-lines" for="burger">
@@ -75,7 +75,7 @@
               <source media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.jpg 1x, img/gallery/2x/photo-2-tablet@2x.jpg 2x">
               <img src="img/gallery/photo-2-mobile.jpg" srcset="img/gallery/2x/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне горы">
             </picture>
-            <div class="photo__info">
+            <div class="photo__info photo__info--small">
               <div>
                 <p class="photo__title">Местная растительность</p>
                 <p class="photo__author">Автор фото: Сергей</p>
@@ -94,7 +94,7 @@
               <source media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.jpg 1x, img/gallery/2x/photo-3-tablet@2x.jpg 2x">
               <img src="img/gallery/photo-3-mobile.jpg" srcset="img/gallery/2x/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в горах">
             </picture>
-            <div class="photo__info">
+            <div class="photo__info photo__info--small">
               <div>
                 <p class="photo__title">Дорога на север</p>
                 <p class="photo__author">Автор фото: Петр</p>
@@ -113,7 +113,7 @@
               <source media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.jpg 1x, img/gallery/2x/photo-4-tablet@2x.jpg 2x">
               <img src="img/gallery/photo-4-mobile.jpg" srcset="img/gallery/2x/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Оранжевые горы">
             </picture>
-            <div class="photo__info">
+            <div class="photo__info photo__info--small">
               <div>
                 <p class="photo__title">Мост дьявола</p>
                 <p class="photo__author">Автор фото: Антон</p>
@@ -144,11 +144,12 @@
             </svg>
           </button>
           <div class="range controls__range">
-            <input class="range__input" id="range-presentation" type="range" min="0" max="100" step="1" value="20">
-            <label class="range__fill" for="range-presentation">
+            <span class="range__line">
               <span class="visually-hidden">
                 Полоса прокрутки
-              </span></label>
+              </span>
+            </span>
+            <span class="range__pointer"></span>
           </div>
           <button class="controls__button controls__button--sub" type="button">
             <span class="visually-hidden">
@@ -208,6 +209,28 @@
           </svg>
         </a>
       </div>
+
+      <img src="/sit-imgs/catalog-Mobile.png" style="position: absolute;
+      width: 100%;
+      top: -223px;
+      left: 0;
+      opacity: 0.6;
+      filter: invert(100%);
+      display: none;" id="pixel-perfect"/>
+      <img src="/sit-imgs/catalog-Tablet.png" style="position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      filter: invert(100%);
+      display: none;" id="pixel-perfect"/>
+      <img src="/sit-imgs/catalog-Desktop.png" style="position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      filter: invert(100%);
+      display: none;" id="pixel-perfect"/>
     </footer>
   </body>
 </html>
