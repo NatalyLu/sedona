@@ -25,13 +25,4 @@
     <path d="M27.0443 24.1128H25.478V26.0968H27.0443V24.1128Z" fill="#81B3D2"/>
     <path d="M30.1769 24.1128H28.6106V26.0968H30.1769V24.1128Z" fill="#81B3D2"/>
   </symbol>
-
-  <view id="burger" viewBox="0 0 40 35" />
-  <view id="gift" viewBox="0 0 32 38" />
-  <view id="house" viewBox="0 0 39 37" />
-
-  <use xlink:href="#burger" width="40" height="35" x="0" y="0"></use>
-  <use xlink:href="#gift" width="32" height="38" x="0" y="0"></use>
-  <use xlink:href="#house" width="39" height="37" x="0" y="0"></use>
-
 </svg>
