@@ -8,12 +8,13 @@
     "repeat empty sub full";
   margin: 0 20px;
   margin-top: -45px;
+  padding: 0 8px;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 0 35px;
-    grid-template-columns: 48px 1fr 64px 41px;//0.6fr 5fr 0.8fr 0.6fr;
+    padding: 0 40px 0 35px;
+    grid-template-columns: 48px 1fr 64px 41px;
     grid-template-areas: "repeat range sub full";
     grid-template-rows: 93px;
     gap: 10px;
@@ -70,21 +71,32 @@
 
 .controls__button--repeat {
   grid-area: repeat;
-  justify-self: start;
+
+  @media (min-width: @tablet-width) {
+    justify-self: start;
+  }
 }
 
 .controls__range {
   grid-area: range;
-  width: 100%;
+  left: -8px;
+  width: calc(100% + 16px);
   height: 45px;
 }
 
 .controls__button--sub {
   grid-area: sub;
-  justify-self: end;
+  padding-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+  }
 }
 
 .controls__button--fullscreen {
   grid-area: full;
-  justify-self: end;
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+  }
 }

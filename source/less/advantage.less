@@ -4,6 +4,17 @@
   font-size: 1rem;
   line-height: 1.5rem;
 
+  &:first-child .advantage__text {
+    //only for mobile
+    @media (max-width: @tablet-width - 1px) {
+      padding-top: 51px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 45px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,42 +49,61 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 35px 12px;
+  padding: 37px 12px 38px 12px;
   text-align: center;
   text-transform: uppercase;
   background-color: @background-color;
   color: @text-alt-color;
 
   @media (min-width: @tablet-width) {
-    padding: 40px 30px;
+    padding: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px;
+    justify-content: flex-start;
+    padding: 51px 60px;
   }
 }
 
 .advantage__title {
   margin: 0 0 10px 0;
   color: inherit;
+  word-spacing: 0;
 
   @media (min-width: @tablet-width) {
     max-width: 150px;
+    margin: 0 0 12px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 11px;
   }
 }
 
 .advantage__number {
-  margin: 0 0 15px 0;
+  margin: 0 0 18px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 25px 0;
+  }
 }
 
 .advantage__description {
   margin: 0;
+  word-spacing: 0;
+
+  @media (min-width: @tablet-width) {
+    word-spacing: -1px;
+  }
 }
 
 .advantage__img {
   width: 100%;
-  height: 260px;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
+  }
 }
 
 .advantage__recommendation {
@@ -82,14 +112,16 @@
   grid-column-start: 1;
   grid-column-end: -1;
   margin: 0 auto;
-  padding: 35px 20px;
+  padding: 37px 20px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
-    padding: 60px 20px;
+    gap: 60px;
+    padding: 62px 30px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -101,12 +133,18 @@
   position: relative;
 
   .advantage__text {
-    padding: 25px;
+    padding: 26px 35px;
     background: @background-alt-color;
     color: @text-color;
 
     @media (min-width: @tablet-width) {
-      padding: 42px 40px 62px 40px;
+      padding: 42px 40px;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 257px;
+      box-sizing: border-box;
     }
   }
 
@@ -114,9 +152,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 5%;
+    left: 6%;
     z-index: 1;
-    width: 90%;
+    width: 88%;
     height: 1px;
     background-color: @line-color;
 
@@ -127,5 +165,11 @@
 
   &:last-child::after {
     display: none;
+  }
+
+  .advantage__description {
+    @media (min-width: @tablet-width) {
+      word-spacing: 0;
+    }
   }
 }

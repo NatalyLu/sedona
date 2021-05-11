@@ -2,7 +2,7 @@
   margin-bottom: 50px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 60px 40px 60px;
+    margin: 0 60px 44px 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,11 +13,12 @@
 .presentation__title {
   text-align: center;
   padding: 0 20px;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 30px auto;
   max-width: 458px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin: 0 auto 35px auto;
   }
 }
 
@@ -26,18 +27,19 @@
   text-align: center;
   text-transform: uppercase;
   max-width: 450px;
-  padding: 0 20px;
-  margin: 0 auto 30px auto;
+  padding: 0 25px;
+  margin: 0 auto 35px auto;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 }
 
 .presentation__video {
   width: 100%;
   height: auto;
+  min-height: 201px;
   display: block;
   background-image: url("/img/video/video-mobile.jpg");
   background-repeat: no-repeat;
@@ -49,6 +51,7 @@
 
   @media (min-width: @tablet-width) {
     background-image: url("/img/video/video-tablet.jpg");
+    min-height: 501px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/video/video-tablet@2x.jpg");
