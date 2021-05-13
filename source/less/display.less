@@ -1,0 +1,21 @@
+.display-on-tablet-width {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: block;
+  }
+}
+
+.display-after-desktop-width {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.display-to-desktop-width {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
