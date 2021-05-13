@@ -1,3 +1,23 @@
+html {
+  font-size: 14px;
+  font-family: "PTSans", "Arial", sans-serif;
+
+  @media (min-width: @desktop-width) {
+    background-color: @background-btns-color;
+  }
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -15,20 +35,4 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-.display-on-tablet-width {
-  display: none;
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
-    display: block;
-  }
-}
-
-.display-after-desktop-width {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
-  }
 }
