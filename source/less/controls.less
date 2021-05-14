@@ -48,17 +48,19 @@
   padding: 0;
   background-color: transparent;
 
-  @media (min-width: @tablet-width) {
-    svg path {
-      fill: @text-alt-color;
+  svg {
+    color: @video-buttons-color;
+
+    @media (min-width: @tablet-width) {
+      color: @text-alt-color;
     }
   }
 
-  &:hover svg path {
-    fill: @svg-fill;
+  &:hover svg {
+    color: @svg-fill;
 
     @media (min-width: @tablet-width) {
-      fill: @text-alt-color;
+      color: @text-alt-color;
       opacity: 0.6;
     }
   }
@@ -69,7 +71,7 @@
   }
 }
 
-.controls__button--repeat {
+.controls__button--replay {
   grid-area: repeat;
 
   @media (min-width: @tablet-width) {
