@@ -209,7 +209,7 @@
 
 .form-review__field--phone,
 .form-review__field--email {
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -217,24 +217,33 @@
     width: 58px;
     height: 58px;
     background-color: @background-icons-color;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  }
+  .form-review__img {
+    position: absolute;
+    vertical-align: middle;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
-.form-review__field--phone::after {
-  background-image: url("/img/icons/phone.svg");
-  background-size: 18px 18px;
-
-  @media (min-width: @desktop-width) {
-    right: 80px;
+.form-review__field--phone {
+  &::before {
+    @media (min-width: @desktop-width) {
+      right: 80px;
+    }
+  }
+  .form-review__img {
+    @media (min-width: @desktop-width) {
+      right: 100px;
+    }
   }
 }
 
-.form-review__field--email::after {
-  background-image: url("/img/icons/mail.svg");
-  background-size: 16px 12px;
+.form-review__field--email {
+  .form-review__img {
+    bottom: 22px;
+    right: 21px;
+  }
 }
 
 // ******************************************
