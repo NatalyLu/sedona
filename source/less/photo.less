@@ -1,4 +1,8 @@
 .photo {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+
   &:nth-child(2n + 3) {
     .photo__info {
       @media (min-width: @tablet-width) {
@@ -28,6 +32,11 @@
 
     @media (min-width: @tablet-width) {
       margin: 0;
+      min-height: 280px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 100%;
     }
   }
 }
@@ -47,9 +56,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
-    top: -80px;
-    margin-bottom: -80px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
     background-color: rgba(@text-color, 30%);
     color: @text-alt-color;
   }
@@ -83,16 +93,15 @@
   svg {
     margin-right: 14px;
     margin-top: -7px;
+    opacity: 0.3;
+    min-width: 23px;
 
     @media (min-width: @tablet-width) {
       margin-right: 9px;
     }
 
     @media (min-width: @desktop-width) {
-      path {
-        opacity: 1;
-        fill: @text-alt-color;
-      }
+      opacity: 1;
     }
   }
 }

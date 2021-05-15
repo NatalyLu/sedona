@@ -158,8 +158,7 @@
 
     @media (min-width: @desktop-width) {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 17px;
+      grid-template-columns: auto 258px 58px;
       align-items: center;
       margin-bottom: 0;
     }
@@ -183,66 +182,48 @@
     @media (min-width: @desktop-width) {
       margin: 0;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 17px;
+    }
   }
 
   .form-review__text {
-    padding: 17px 62px 15px 21px;
-
-    @media (min-width: @desktop-width) {
-      width: 316px;
-    }
-  }
-
-  .hidden {
-    @media (min-width: @desktop-width) {
-      display: none;
-    }
+    padding: 17px 21px 15px 21px;
   }
 }
 
 .form-review__wrapper-contacts {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 50px;
   }
 }
 
 .form-review__field--phone,
 .form-review__field--email {
-  &::before {
-    content: "";
+  .form-review__img {
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     bottom: 0;
     right: 0;
     width: 58px;
     height: 58px;
     background-color: @background-icons-color;
-  }
-  .form-review__img {
-    position: absolute;
-    vertical-align: middle;
-    right: 20px;
-    bottom: 20px;
-  }
-}
 
-.form-review__field--phone {
-  &::before {
     @media (min-width: @desktop-width) {
-      right: 80px;
+      position: relative;
     }
   }
-  .form-review__img {
-    @media (min-width: @desktop-width) {
-      right: 100px;
-    }
-  }
-}
 
-.form-review__field--email {
-  .form-review__img {
-    bottom: 22px;
-    right: 21px;
+  .form-review__label {
+    @media (min-width: @desktop-width) {
+      justify-self: right;
+    }
   }
 }
 
@@ -467,8 +448,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    grid-template-columns: 200px 190px 178px 203px;
     justify-content: space-between;
-    gap: 0;
+    gap: 10px;
   }
 
   .form-review__checkbox {
@@ -478,13 +460,7 @@
 
     @media (min-width: @desktop-width) {
       display: flex;
-      justify-content: center;
-    }
-
-    &:first-child {
-      @media (min-width: @desktop-width) {
-        justify-content: flex-start;
-      }
+      justify-content: space-between;
     }
   }
 }
