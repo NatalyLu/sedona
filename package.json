@@ -6,6 +6,7 @@
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.5",
     "browser-sync": "2.26.14",
+    "editorconfig-checker": "^4.0.2",
     "gulp": "4.0.2",
     "gulp-less": "4.0.1",
     "gulp-plumber": "1.2.1",
@@ -22,7 +23,7 @@
     "svgo": "^2.3.0"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cheker -exclude *.css",
+    "editorconfig": "editorconfig-checker -exclude *.css",
     "stylelint": "stylelint '**/*.less' --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
