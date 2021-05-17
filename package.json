@@ -11,15 +11,22 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
     "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
+    "jpegtran": "^2.0.0",
+    "optipng": "^3.0.0",
     "postcss": "8.2.8",
+    "postcss-csso": "^5.0.1",
     "stylelint": "13.12.0",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-htmlacademy": "0.1.4",
+    "svgo": "^2.3.0"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "editorconfig": "editorconfig-cheker -exclude *.css",
+    "stylelint": "stylelint '**/*.less' --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "gulp build",
+    "styles": "gulp styles",
     "start": "gulp"
   },
   "browserslist": [
