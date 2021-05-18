@@ -7,7 +7,14 @@
     <link rel="icon" sizes="16x16" href="img/icons/favicons/16.svg">
     <link rel="icon" sizes="32x32" href="img/icons/favicons/32.svg">
     <link rel="icon" sizes="152x152" href="img/icons/favicons/152.svg">
+    <link rel="apple-touch-icon" href="img/icons/favicons/32.svg">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
+    <link rel="preload" as="image" href="/img/background-imgs/back-mobile.jpg" imagesrcset="/img/background-imgs/back-desktop.jpg 1200w"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="description" content="Заполните форму отзыва об отеле в Sedona. Помогите нашим отелям стать лучше!">
   </head>
   <body>
     <header class="page-header">
@@ -27,13 +34,13 @@
             <span class="visually-hidden">Место под логотип</span>
           </li>
           <li>
-            <a class="main-nav__item main-nav__item--active">Форма Отзыва</a>
+            <a class="main-nav__item main-nav__item--active" href="#">Форма Отзыва</a>
           </li>
           <li>
             <a class="main-nav__item" href="https://htmlacademy.ru/">HTML ACADEMY</a>
           </li>
         </ul>
-        <a class="main-nav__logo">
+        <a href="#" class="main-nav__logo">
           <img src="img/logo-adaptive.svg" width="185" height="96" alt="Логотип Sedona">
         </a>
       </nav>
