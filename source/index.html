@@ -12,7 +12,7 @@
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="/fonts/ptsans.woff2" as="font">
     <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
-    <link rel="preload" as="image" href="/img/background-imgs/back-mobile.jpg" imagesrcset="/img/background-imgs/back-desktop.jpg 1200w"/>
+    <link rel="preload" as="image" href="/img/background-imgs/back-mobile.jpg"/>
     <meta name="theme-color" content="#ffffff"/>
     <meta name="description" content="Добро пожаловаь в Sedona. Здесь вы найдете самые еинтересные места для посещения">
   </head>
@@ -136,19 +136,10 @@
         <div class="find-hotels__wrapper">
           <h2 class="main-title find-hotels__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
           <p class="find-hotels__description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
-          <button class="button find-hotels__button" type="button"><span>НАЙТИ гостиницу</span></button>
+          <a class="button find-hotels__button" href="find-hotels" target="_blank"><span>НАЙТИ гостиницу</span></a>
         </div>
         <div class="find-hotels__map">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x" type="image/webp">
-            <source srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x" type="image/webp">
-
-            <source media="(min-width: 1200px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
-            <img src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта">
-          </picture>
-          <span class="find-hotels__marker"></span>
+          <iframe aria-label="Карта" class="find-hotels__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Afb5d2a96cb1f6e11b15cd97986d0a976cefeca8b48f8cb9430083607989f80ce&amp;source=constructor" width="1200" height="350"></iframe>
         </div>
       </section>
     </main>
