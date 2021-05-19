@@ -12,7 +12,7 @@
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="/fonts/ptsans.woff2" as="font">
     <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
-    <link rel="preload" as="image" href="/img/background-imgs/back-mobile.jpg" imagesrcset="/img/background-imgs/back-desktop.jpg 1200w"/>
+    <link rel="preload" as="image" href="/img/background-imgs/back-mobile.jpg"/>
     <meta name="theme-color" content="#ffffff"/>
     <meta name="description" content="Галерея Sedona. Прочувствуй атмосферу этих мест">
   </head>
@@ -40,7 +40,7 @@
             <a class="main-nav__item" href="https://htmlacademy.ru/">HTML ACADEMY</a>
           </li>
         </ul>
-        <a href="#" class="main-nav__logo">
+        <a href="index.html" class="main-nav__logo">
           <img src="img/logo-adaptive.svg" width="185" height="96" alt="Логотип Sedona">
         </a>
       </nav>
@@ -55,96 +55,104 @@
         <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         <ul class="gallery__list">
           <li class="gallery__item photo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-1-desktop.webp 1x, img/gallery/2x/photo-1-desktop@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.webp 1x, img/gallery/2x/photo-1-tablet@2x.webp 2x" type="image/webp">
-              <source srcset="img/gallery/photo-1-mobile.webp 1x, img/gallery/2x/photo-1-mobile@2x.webp 2x" type="image/webp">
+            <a href="boris-1" target="_blank" aria-label="неродные просторы открыть во весь экран">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-1-desktop.webp 1x, img/gallery/2x/photo-1-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.webp 1x, img/gallery/2x/photo-1-tablet@2x.webp 2x" type="image/webp">
+                <source srcset="img/gallery/photo-1-mobile.webp 1x, img/gallery/2x/photo-1-mobile@2x.webp 2x" type="image/webp">
 
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-1-desktop.jpg 1x, img/gallery/2x/photo-1-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.jpg 1x, img/gallery/2x/photo-1-tablet@2x.jpg 2x">
-              <img src="img/gallery/photo-1-mobile.jpg" srcset="img/gallery/2x/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога и закат">
-            </picture>
-            <div class="photo__info">
-              <div>
-                <p class="photo__title">неродные просторы</p>
-                <p class="photo__author">Автор фото: Борис</p>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-1-desktop.jpg 1x, img/gallery/2x/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet.jpg 1x, img/gallery/2x/photo-1-tablet@2x.jpg 2x">
+                <img src="img/gallery/photo-1-mobile.jpg" srcset="img/gallery/2x/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога и закат">
+              </picture>
+              <div class="photo__info">
+                <div>
+                  <p class="photo__title">неродные просторы</p>
+                  <p class="photo__author">Автор фото: Борис</p>
+                </div>
+                <div class="photo__likes">
+                  <svg width="23" height="21">
+                    <use xlink:href="/img/icons/sprite.svg#like"></use>
+                  </svg>
+                  <span>1350</span>
+                </div>
               </div>
-              <div class="photo__likes">
-                <svg width="23" height="21">
-                  <use xlink:href="/img/icons/sprite.svg#like"></use>
-                </svg>
-                <span>1350</span>
-              </div>
-            </div>
+            </a>
           </li>
           <li class="gallery__item photo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-2-desktop.webp 1x, img/gallery/2x/photo-2-desktop@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.webp 1x, img/gallery/2x/photo-2-tablet@2x.webp 2x" type="image/webp">
-              <source srcset="img/gallery/photo-2-mobile.webp 1x, img/gallery/2x/photo-2-mobile@2x.webp 2x" type="image/webp">
+            <a href="sergey-1" target="_blank" aria-label="Местная растительность открыть во весь экран">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-2-desktop.webp 1x, img/gallery/2x/photo-2-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.webp 1x, img/gallery/2x/photo-2-tablet@2x.webp 2x" type="image/webp">
+                <source srcset="img/gallery/photo-2-mobile.webp 1x, img/gallery/2x/photo-2-mobile@2x.webp 2x" type="image/webp">
 
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-2-desktop.jpg 1x, img/gallery/2x/photo-2-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.jpg 1x, img/gallery/2x/photo-2-tablet@2x.jpg 2x">
-              <img src="img/gallery/photo-2-mobile.jpg" srcset="img/gallery/2x/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне горы">
-            </picture>
-            <div class="photo__info photo__info--small">
-              <div>
-                <p class="photo__title">Местная растительность</p>
-                <p class="photo__author">Автор фото: Сергей</p>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-2-desktop.jpg 1x, img/gallery/2x/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet.jpg 1x, img/gallery/2x/photo-2-tablet@2x.jpg 2x">
+                <img src="img/gallery/photo-2-mobile.jpg" srcset="img/gallery/2x/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне горы">
+              </picture>
+              <div class="photo__info photo__info--small">
+                <div>
+                  <p class="photo__title">Местная растительность</p>
+                  <p class="photo__author">Автор фото: Сергей</p>
+                </div>
+                <div class="photo__likes">
+                  <svg width="23" height="21">
+                    <use xlink:href="/img/icons/sprite.svg#like"></use>
+                  </svg>
+                  <span>143</span>
+                </div>
               </div>
-              <div class="photo__likes">
-                <svg width="23" height="21">
-                  <use xlink:href="/img/icons/sprite.svg#like"></use>
-                </svg>
-                <span>143</span>
-              </div>
-            </div>
+            </a>
           </li>
           <li class="gallery__item photo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-3-desktop.webp 1x, img/gallery/2x/photo-3-desktop@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.webp 1x, img/gallery/2x/photo-3-tablet@2x.webp 2x" type="image/webp">
-              <source srcset="img/gallery/photo-3-mobile.webp 1x, img/gallery/2x/photo-3-mobile@2x.webp 2x" type="image/webp">
+            <a href="petr-1" target="_blank" aria-label="Дорога на север открыть во весь экран">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-3-desktop.webp 1x, img/gallery/2x/photo-3-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.webp 1x, img/gallery/2x/photo-3-tablet@2x.webp 2x" type="image/webp">
+                <source srcset="img/gallery/photo-3-mobile.webp 1x, img/gallery/2x/photo-3-mobile@2x.webp 2x" type="image/webp">
 
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-3-desktop.jpg 1x, img/gallery/2x/photo-3-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.jpg 1x, img/gallery/2x/photo-3-tablet@2x.jpg 2x">
-              <img src="img/gallery/photo-3-mobile.jpg" srcset="img/gallery/2x/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в горах">
-            </picture>
-            <div class="photo__info photo__info--small">
-              <div>
-                <p class="photo__title">Дорога на север</p>
-                <p class="photo__author">Автор фото: Петр</p>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-3-desktop.jpg 1x, img/gallery/2x/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet.jpg 1x, img/gallery/2x/photo-3-tablet@2x.jpg 2x">
+                <img src="img/gallery/photo-3-mobile.jpg" srcset="img/gallery/2x/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в горах">
+              </picture>
+              <div class="photo__info photo__info--small">
+                <div>
+                  <p class="photo__title">Дорога на север</p>
+                  <p class="photo__author">Автор фото: Петр</p>
+                </div>
+                <div class="photo__likes">
+                  <svg width="23" height="21">
+                    <use xlink:href="/img/icons/sprite.svg#like"></use>
+                  </svg>
+                  <span>96</span>
+                </div>
               </div>
-              <div class="photo__likes">
-                <svg width="23" height="21">
-                  <use xlink:href="/img/icons/sprite.svg#like"></use>
-                </svg>
-                <span>96</span>
-              </div>
-            </div>
+            </a>
           </li>
           <li class="gallery__item photo">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-4-desktop.webp 1x, img/gallery/2x/photo-4-desktop@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.webp 1x, img/gallery/2x/photo-4-tablet@2x.webp 2x" type="image/webp">
-              <source srcset="img/gallery/photo-4-mobile.webp 1x, img/gallery/2x/photo-4-mobile@2x.webp 2x" type="image/webp">
+            <a href="anton-1" target="_blank" aria-label="Мост дьявола">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-4-desktop.webp 1x, img/gallery/2x/photo-4-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.webp 1x, img/gallery/2x/photo-4-tablet@2x.webp 2x" type="image/webp">
+                <source srcset="img/gallery/photo-4-mobile.webp 1x, img/gallery/2x/photo-4-mobile@2x.webp 2x" type="image/webp">
 
-              <source media="(min-width: 1200px)" srcset="img/gallery/photo-4-desktop.jpg 1x, img/gallery/2x/photo-4-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.jpg 1x, img/gallery/2x/photo-4-tablet@2x.jpg 2x">
-              <img src="img/gallery/photo-4-mobile.jpg" srcset="img/gallery/2x/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Оранжевые горы">
-            </picture>
-            <div class="photo__info photo__info--small">
-              <div>
-                <p class="photo__title">Мост дьявола</p>
-                <p class="photo__author">Автор фото: Антон</p>
+                <source media="(min-width: 1200px)" srcset="img/gallery/photo-4-desktop.jpg 1x, img/gallery/2x/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet.jpg 1x, img/gallery/2x/photo-4-tablet@2x.jpg 2x">
+                <img src="img/gallery/photo-4-mobile.jpg" srcset="img/gallery/2x/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Оранжевые горы">
+              </picture>
+              <div class="photo__info photo__info--small">
+                <div>
+                  <p class="photo__title">Мост дьявола</p>
+                  <p class="photo__author">Автор фото: Антон</p>
+                </div>
+                <div class="photo__likes">
+                  <svg width="23" height="21">
+                    <use xlink:href="/img/icons/sprite.svg#like"></use>
+                  </svg>
+                  <span>254</span>
+                </div>
               </div>
-              <div class="photo__likes">
-                <svg width="23" height="21">
-                  <use xlink:href="/img/icons/sprite.svg#like"></use>
-                </svg>
-                <span>254</span>
-              </div>
-            </div>
+            </a>
           </li>
         </ul>
       </section>
