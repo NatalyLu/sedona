@@ -17,13 +17,17 @@
   width: 27px;
   height: 34px;
 
-  &:hover svg path {
-    fill: @background-color;
+  svg {
+    color: @text-color;
   }
 
-  &:active svg path,
-  &:focus svg path {
-    fill: @text-color;
+  &:hover svg {
+    color: @background-color;
+  }
+
+  &:active svg,
+  &:focus svg {
+    color: @text-color;
     opacity: 0.3;
   }
 }
