@@ -1,58 +1,34 @@
-# Личный проект «Седона» 
+# Project «Sedona» 
 
-* Студент: [Наталья Лукашина](https://up.htmlacademy.ru/adaptive/22/user/814025).
-* Наставник: `Виктор Гирда`.
+This is an adaptive project with a rubber layout, that has 3 pages:
 
----
+**1. Main page**
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+<img src="https://user-images.githubusercontent.com/45073400/192612332-348024b9-5c4e-4fe1-a5d2-a4354d0e8744.png" width="280" height="443">
 
-Полезный файл:
+**2. Catalog**
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+<img src="https://user-images.githubusercontent.com/45073400/192613109-54c9ae9a-e48f-4251-ac40-a6d48e338203.png" width="440" height="462">
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+**3. Form**
 
----
+<img src="https://user-images.githubusercontent.com/45073400/192613531-18ccda15-abc6-4239-bdb2-d7be7d06d86d.png" width="596" height="466">
 
-### Памятка
+# Quick start
 
-#### 1. Зарегистрируйтесь на Гитхабе
+1. First check that you have a version of node 10.13.0 or higher
+2. Run the command `npm ci` to establish the necessary dependencies
+3. Next build the project with the `npm run start` command
+4. Well done! Now you can use the site in your browser :)
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
 
-#### 2. Создайте форк
+# Commands
+ 
+If you want to test the project use `npm run test`. This command includes editorconfig and stylelint checking.
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/814025-sedona-22) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+The [editorconfig](https://editorconfig.org/) and [stylelint](https://stylelint.io/) contain rules that help maintain consistent coding styles. You can check more in `.editorconfig` and `.stylelintrc` files.
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807979-e1129f00-a18f-11e9-90d7-b44d2ff2c003.jpg">
+Use `npm run build` to build the project.
 
-Получится вот так:
+And `npm run start` to start and enjoy it 🙌
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807980-e1129f00-a18f-11e9-8137-45876f130340.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807982-e1129f00-a18f-11e9-98c4-0d3bf4b85cf1.jpg">
-
-Клонировать репозиторий можно так:
-
-```
-git clone SSH-адрес_вашего_форка
-```
-
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
-
-[check-image]: https://github.com/htmlacademy-adaptive/814025-sedona-22/workflows/Project%20check/badge.svg?branch=master
-[check-url]: https://github.com/htmlacademy-adaptive/814025-sedona-22/actions
