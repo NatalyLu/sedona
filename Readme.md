@@ -1,4 +1,4 @@
-# Project «Sedona» 
+# Description
 
 This is an adaptive project with a rubber layout, that has 3 pages:
 
